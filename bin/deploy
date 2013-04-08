@@ -1,0 +1,8 @@
+#!/bin/bash
+root_dir=`dirname $0`/..
+
+defaults="--acl-public --exclude=.DS_Store"
+cd $root_dir
+
+echo "Deploying site to $s3_bucket"
+s3cmd sync --no-preserve $defaults public/* $s3_bucket/

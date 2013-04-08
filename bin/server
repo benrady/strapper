@@ -1,0 +1,6 @@
+ #!/usr/bin/env bash
+ 
+ root_dir=`dirname $0`/..
+
+ cd $root_dir/public
+ python -m SimpleHTTPServer
