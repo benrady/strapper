@@ -6,6 +6,9 @@ Strapper is a basic skeleton for building Single Page HTML5 apps, using
 * [jQuery](http://jquery.com/)
 * ...And [Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) for deployment
 
+# Live Example
+
+It's not much to look at, but [here's a live exaple](home.benrady.com)
 
 # Develop
 
@@ -17,7 +20,7 @@ Strapper is a basic skeleton for building Single Page HTML5 apps, using
 
 
 # Deploy
-0. Create a file named `.deploy-config` in strapper's root directory
+0. Create a file named `.deploy_config` in strapper's root directory
 0. Set the `s3_bucket` variable to be your Amazon S3 bucket name 
   
         s3_bucket=mybucket.example.com

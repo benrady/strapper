@@ -1,5 +1,5 @@
 #!/bin/bash
-root_dir="$(cd "${0%/*}"/.. 2>/dev/null; echo "$PWD"/"${0##*/}")"
+root_dir="$(cd "${0%/*}"/.. 2>/dev/null; echo "$PWD")"
 
 source $root_dir/.deploy_config
 
