@@ -11,12 +11,6 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/main.css">
 
@@ -35,24 +29,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">Project name</a>
+                    <a class="brand" href="#home">Strapper</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active"><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
                         </ul>
                         <!-- form class="navbar-form pull-right">
                             <input class="span2" type="text" placeholder="Email">
@@ -64,12 +46,24 @@
             </div>
         </div>
 
-        <div class="container">
+        <!-- Main Content -->
+        <div id='content-main' class="container-fluid">
         </div> 
+
+        <!-- View Templates -->
+        <div class='hidden' id='template'>
+
+          <!-- Text Banner -->
+          <div class='row-fluid banner'>
+            <span class='span4 offset4 well text-center'>
+              <h2 class='banner-text'></h2>
+            </span>
+          </div>
+
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <!-- Optional libraries -->
