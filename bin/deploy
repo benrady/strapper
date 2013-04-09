@@ -1,8 +1,16 @@
 #!/bin/bash
-root_dir=`dirname $0`/..
+root_dir="$(cd "${0%/*}"/.. 2>/dev/null; echo "$PWD"/"${0##*/}")"
 
-defaults="--acl-public --exclude=.DS_Store"
-cd $root_dir
+source $root_dir/.deploy_config
 
-echo "Deploying site to $s3_bucket"
-s3cmd sync --no-preserve $defaults public/* $s3_bucket/
+if [[ -n $s3_bucket ]]; then
+  defaults="--acl-public --exclude=.DS_Store"
+  cd $root_dir
+
+  echo "Deploying site to $s3_bucket"
+  s3cmd sync --no-preserve $defaults public/* $s3_bucket/
+  exit 0
+fi
+
+echo "No deploy targets defined in $root_dir/.deploy_config"
+exit 1
