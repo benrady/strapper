@@ -23,7 +23,7 @@ It's not much to look at, but [here's a live example](http://home.benrady.com)
 The default deploy script for Strapper uses [Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html). S3 is an inexpensive and scalable option for hosting static apps that use 3rd party (a.k.a. cloud) services for all server-side behavior. To deploy a Strapper app to S3...
 
 0. Create a file named `.deploy_config` in strapper's root directory
-0. Set the `s3_bucket` variable to be your Amazon S3 bucket name
+0. In this file, define an environment variable named `s3_bucket`. Set this variable to be your Amazon S3 bucket name. For example:
 
         s3_bucket=mybucket.example.com
 0. Install (and configure) [s3cmd](http://s3tools.org/s3cmd)
