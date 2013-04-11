@@ -2,8 +2,8 @@
 (function() {
   var appName = 'Strapper';
 
-  function triggerEvent(name, args) {
-    $('#content-main>*').trigger(appName + '.' + name, args);
+  function triggerEvent(name, data) {
+    $('#content-main>*').trigger(appName + '.' + name, data);
   }
 
   function bannerTemplate(text) {
@@ -12,9 +12,11 @@
     var banner = $('#template .banner').clone();
     banner.find('.banner-text').text(text);
 
-    // Event Binding (removed when the view changes)
-    banner.bind('Strapper.fooEvent', function() { 
-      console.log('fooEvent!');
+    // Event Binding example
+    // You can define and trigger any arbitrary event.
+    // viewClose is automatically triggered when a view is about to close
+    banner.bind(appName + '.viewClose', function(e, newViewName) { 
+      console.log("Changing to " + newViewName);
     });
     return banner;
   }
@@ -26,7 +28,7 @@
   };
 
   function showView(name) {
-    name = name || 'home';
+    triggerEvent('viewClose', name);
     $('.nav li').removeClass('active');
     $('a[href=#' + name +']').closest('li').addClass('active');
     $('#content-main').
@@ -34,12 +36,16 @@
       append(views[name]());
   }
 
+  function currentView() {
+    return window.location.hash.split('#')[1] || 'home;
+  }
+
   $(document).ready(function(argument) {
     window.onhashchange = function (e) {
-      showView(e.newURL.split('#')[1]);
+      showView(currentView());
       return true;
     };
-    showView(window.location.hash.split('#')[1]);
+    showView(currentView());
     $('.appName').text(appName);
   });
 })();
