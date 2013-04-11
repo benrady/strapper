@@ -1,4 +1,10 @@
+
 (function() {
+  var appName = 'Strapper';
+
+  function triggerEvent(name, args) {
+    $('#content-main>*').trigger(appName + '.' + name, args);
+  }
 
   function bannerTemplate(text) {
     // Insert your templating library of choice here, if desired
@@ -6,18 +12,6 @@
     var banner = $('#template .banner').clone();
     banner.find('.banner-text').text(text);
     return banner;
-  }
-
-  function homeView() {
-    $('content-main').append($('<h3>').text('This is the home view'));
-  }
-
-  function contactView() {
-    $('content-main').append($('<h3>').text('This is the contact view'));
-  }
-
-  function aboutView() {
-    $('content-main').append($('<h3>').text('This is the about view'));
   }
 
   var views = {
@@ -41,5 +35,6 @@
       return true;
     };
     showView(window.location.hash.split('#')[1]);
+    $('.appName').text(appName);
   });
 })();
