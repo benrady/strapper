@@ -11,6 +11,11 @@
     // Mustache, Hogan, Handlebars, etc...
     var banner = $('#template .banner').clone();
     banner.find('.banner-text').text(text);
+
+    // Event Binding (removed when the view changes)
+    banner.bind('Strapper.fooEvent', function() { 
+      console.log('fooEvent!');
+    });
     return banner;
   }
 
