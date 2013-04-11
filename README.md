@@ -1,6 +1,6 @@
 # About Strapper 
 
-Strapper is a basic skeleton for building single page HTML5 apps, using [Twitter Bootstrap](http://twitter.github.io/bootstrap). Unlike a "web framework" Strapper makes no assumptions about your data model. It simply provides:
+Strapper is a basic skeleton for building single page HTML5 apps, using [Twitter Bootstrap](http://twitter.github.io/bootstrap). Strapper is not opinionated software. It simply provides:
 
 * A view/controller mechanism, based on url hash change events.
 * A simple DOM event wrapper
