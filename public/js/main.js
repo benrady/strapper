@@ -36,11 +36,11 @@
   }
 
   function currentView() {
-    return window.location.hash.split('#')[1] || 'home;
+    return window.location.hash.split('#')[1] || 'home';
   }
 
-  $(document).ready(function(argument) {
-    window.onhashchange = function (e) {
+  $(document).ready(function() {
+    window.onhashchange = function() {
       showView(currentView());
       return true;
     };
