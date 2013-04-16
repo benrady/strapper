@@ -8,7 +8,7 @@ Strapper is a basic skeleton for building single page HTML5 apps, using [Twitter
 
 # Live Example
 
-It's not much to look at, but [here's a live example](http://home.benrady.com)
+It's not much to look at, but [here's a live example](http://strapper.benrady.com)
 
 # Develop
 
