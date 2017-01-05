@@ -38,14 +38,6 @@ function currentView() {
   return 'home';
 }
 
-function currentView() {
-  var hash = window.location.hash.split('#')[1];
-  if(hash) {
-    return hash.split('-')[0];
-  }
-  return 'home';
-}
-
 var routes = {}; // Define these in your app
 
 $(document).ready(function() {
